@@ -1,8 +1,8 @@
 
-Poker Card Detection/Tracking - v4 2023-12-11 1:44pm
+Playing Cards - v4 FASTmodel-resized640-aug3x
 ==============================
 
-This dataset was exported via roboflow.com on December 11, 2023 at 1:49 PM GMT
+This dataset was exported via roboflow.com on March 7, 2023 at 7:04 PM GMT
 
 Roboflow is an end-to-end computer vision platform that helps you
 * collaborate with your team on computer vision projects
@@ -17,18 +17,23 @@ visit https://github.com/roboflow/notebooks
 
 To find over 100k other datasets and pre-trained models, visit https://universe.roboflow.com
 
-The dataset includes 384 images.
-Playing-cards are annotated in YOLOv8 format.
+The dataset includes 24240 images.
+Cards are annotated in YOLOv8 format.
 
 The following pre-processing was applied to each image:
 * Auto-orientation of pixel data (with EXIF-orientation stripping)
 * Resize to 640x640 (Stretch)
 
 The following augmentation was applied to create 3 versions of each source image:
-* Random rotation of between -14 and +14 degrees
-* Random exposure adjustment of between -12 and +12 percent
-
-The following transformations were applied to the bounding boxes of each image:
-* Random rotation of between -8 and +8 degrees
+* 50% probability of horizontal flip
+* 50% probability of vertical flip
+* Equal probability of one of the following 90-degree rotations: none, clockwise, counter-clockwise, upside-down
+* Randomly crop between 0 and 15 percent of the image
+* Random rotation of between -10 and +10 degrees
+* Random shear of between -2° to +2° horizontally and -2° to +2° vertically
+* Random brigthness adjustment of between -25 and +25 percent
+* Random exposure adjustment of between -15 and +15 percent
+* Random Gaussian blur of between 0 and 1.75 pixels
+* Salt and pepper noise was applied to 2 percent of pixels
 
 
