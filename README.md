@@ -1,11 +1,10 @@
 # Poker-Card-Detection-Tracking
-Using Convolutional Neural Networks to detect poker playing cards
+Using YOLO and roboflow to track poker cards
 
 ## <u>Overview</u>
-The main objective of this project is to develop a classification algorithm that correctly identifies individuals with heart disease based on some of their health condition and other relevant attributes. To achieve that several classifiers were trained on a labelled dataset of patients, as well as ensemble methods, boosting and stacking methods. Results from all these methods were thoroughly analysed and the advantages and disadvantages of each of the methods used were rigorously discussed. The classifier that was ultimately selected was the one that achieved the best balance between performance and interpretability.
+The main objective of this sub-project is to develop a tracking model that accurately tracks poker cards (flop, turn and river). Another personal objective of this project is to learn about the new YOLOv8 API and more generally how tracking algorithms work.
 
 ## <u>About the dataset</u>
-
 The Playing Cards dataset is a collection of synthetically generated cards blended into various types of backgrounds. You will be able to perform object detection to detect both number and suit of the cards. The dataset contains 10100 images that were preprocessed and augmented resulting in a total of 24240 which were consequently split into 21210-2020-1010 for training, validation and testing respectively. 
 
 ### Preprocessing:
@@ -27,4 +26,9 @@ Outputs per training example: 3
 - Blur: Up to 1.75px
 - Noise: Up to 2% of pixels
 - Cutout: 5 boxes with 2% size each
-[roboflow playing card dataset]([https://github.com/ultralytics/yolov5](https://universe.roboflow.com/augmented-startups/playing-cards-ow27d/dataset/4)https://universe.roboflow.com/augmented-startups/playing-cards-ow27d/dataset/4]
+
+Dataset: [roboflow playing card dataset]([https://github.com/ultralytics/yolov5](https://universe.roboflow.com/augmented-startups/playing-cards-ow27d/dataset/4)https://universe.roboflow.com/augmented-startups/playing-cards-ow27d/dataset/4]
+ 
+## <u>The next steps</u>
+- An IP camera will be installed on top of the poker table or at a favourable angle for detecting cards on the borad. The model should be running and continiously detecting cards. As the cards are opened (flor-turn-river), the predicted labels should be added to the database.
+- With the RFID readers installed to read the players cards, a complete and live view of the action should be running.  
